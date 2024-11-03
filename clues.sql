@@ -1,7 +1,7 @@
 -- Clue #1: We recently got word that someone fitting Carmen Sandiego's description has been traveling through Southern Europe. She's most likely traveling someplace where she won't be noticed, so find the least populated country in Southern Europe, and we'll start looking for her there.
  
 -- Write SQL query here
-SELECT name, population
+SELECT name, population, code
 FROM countries WHERE region = 'Southern Europe'
 ORDER BY population ASC
 LIMIT 1;
@@ -58,4 +58,5 @@ WHERE cities.countrycode = 'BRA' AND countries.code = 'BRA';
 
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
-SELECT name, countrycode, district, population FROM cities WHERE population = 91084;
+SELECT name, countrycode, district, population 
+FROM cities WHERE population = 91084;
